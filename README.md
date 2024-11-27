@@ -20,6 +20,7 @@ dataset/
 ```
 - The text files(*.txt) contain essential ground truth information, but to upload the dataset to Hugging Face Datasets, this information must be matched with its corresponding image file in the `metadata.csv` file. This process is automatically executed in upload.py.
 
+# Run
 
 ```
 git clone https://github.com/developer0hye/hugging-face-image-ocr-dataset-upload-example.git
