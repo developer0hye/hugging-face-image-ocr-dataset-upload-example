@@ -38,7 +38,7 @@ def process_split(root: pathlib.Path, split: str, query: str) -> pd.DataFrame:
     })
 
 def main():
-    login()
+    # login()
     root = pathlib.Path('data')
     huggingface_id = 'developer0hye'
     huggingface_dataset_name = 'korocr'

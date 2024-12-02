@@ -1,0 +1,1 @@
+["CCTV", "녹화중", "CCTV", "in", "Operation"]
