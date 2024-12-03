@@ -6,7 +6,7 @@ from datasets import load_dataset
 
 def read_label_file(txt_file: pathlib.Path) -> str:
     """Read and clean label from text file"""
-    with open(txt_file, 'r') as f:
+    with open(txt_file, 'r', encoding='utf-8') as f:
         return f.read().rstrip()
 
 def process_split(root: pathlib.Path, split: str, query: str) -> pd.DataFrame:
@@ -17,7 +17,7 @@ def process_split(root: pathlib.Path, split: str, query: str) -> pd.DataFrame:
     labels = []
     
     jpg_files = sorted(root.glob(f'{split}/*.jpg'))
-    
+    print(f'Processing {len(jpg_files)} files in {split} split')
     for jpg_file in tqdm.tqdm(jpg_files):
         
         txt_file = jpg_file.with_suffix('.txt')
@@ -38,7 +38,6 @@ def process_split(root: pathlib.Path, split: str, query: str) -> pd.DataFrame:
     })
 
 def main():
-    # login()
     root = pathlib.Path('data')
     huggingface_id = 'developer0hye'
     huggingface_dataset_name = 'korocr'
@@ -48,8 +47,9 @@ def main():
     for split in ['train', 'validation']:
         df = process_split(root, split, query)
         df.to_csv(f'{root}/{split}/metadata.csv', index=False)
-        dataset = load_dataset('imagefolder', data_dir=root, split=split)
-        dataset.push_to_hub(f'{huggingface_id}/{huggingface_dataset_name}')
+        
+    dataset = load_dataset('imagefolder', data_dir=root)
+    dataset.push_to_hub(f'{huggingface_id}/{huggingface_dataset_name}')
 
 if __name__ == '__main__':
     main()
