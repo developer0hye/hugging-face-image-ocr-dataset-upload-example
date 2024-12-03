@@ -48,8 +48,8 @@ def main():
     for split in ['train', 'validation']:
         df = process_split(root, split, query)
         df.to_csv(f'{root}/{split}/metadata.csv', index=False)
-        dataset = load_dataset('imagefolder', data_dir=root, split=split)
-        dataset.push_to_hub(f'{huggingface_id}/{huggingface_dataset_name}')
+    dataset = load_dataset('imagefolder', data_dir=root)
+    dataset.push_to_hub(f'{huggingface_id}/{huggingface_dataset_name}')
 
 if __name__ == '__main__':
     main()
