@@ -1,0 +1,1 @@
+["SwitchBot", "Bot", "봇", "원하는", "대로", "다양한", "방법으로", "기계식", "버튼을", "누르십시오.", "다음", "서비스를", "지원하려면", "스위치봇", "허브", "기기를", "추가하십시오." "works", "with", "alexa", "works", "with", "Hey", "Google", "Siri", "Shortcuts", "Works", "with", "IFTTT", "Works", "with", "SmartThings", "SwitchBot"]

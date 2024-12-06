@@ -1,0 +1,1 @@
+["서울역", "Seoul", "Station", "l", "LOTTE", "OUTLETS"]

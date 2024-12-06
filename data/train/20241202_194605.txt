@@ -1,0 +1,1 @@
+["엘리베이터", "3호", "Elevator", "3", "서울역광장", "연결", "Seoul", "Station", "Square"]
