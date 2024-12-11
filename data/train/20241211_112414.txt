@@ -1,0 +1,1 @@
+["돈독", "Pork", "cutlet", "&", "Drink"]
