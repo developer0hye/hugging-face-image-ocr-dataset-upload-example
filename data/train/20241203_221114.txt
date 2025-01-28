@@ -1,0 +1,1 @@
+["BOARDING", "PASS", "NAME", "KWON/YONGHYE", "MR", "FROM", "LONDON", "TO", "SEOUL/INCHEON", "DATE", "28SEP24", "K", "SEAT", "좌석", "43G", "FLIGHT", "편명", "KE", "908", "AISLE", "14741965****", "140"]
